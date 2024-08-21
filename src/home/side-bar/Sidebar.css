@@ -1,0 +1,95 @@
+/* src/Sidebar.css */
+.sidebar {
+	width: 320px; /* Expanded width */
+	background-color: #1c1e21; /* Darker sidebar background */
+	color: #ecf0f1; /* Light text color */
+	height: calc(100vh - 60px); /* Full height minus header height */
+	padding: 15px; /* Padding around the sidebar */
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+	overflow-y: auto; /* Scrollable if content overflows */
+	border-right: 2px solid #34495e; /* Border for the sidebar */
+	transition: width 0.3s, padding 0.3s; /* Smooth transition for opening/closing */
+	position: fixed; /* Fix sidebar position */
+	top: 60px; /* Space below header */
+	left: 0; /* Align with left edge */
+}
+
+.sidebar.closed {
+	width: 60px; /* Thin width when collapsed */
+	padding: 15px 5px; /* Reduce padding when collapsed */
+}
+
+.sidebar-content {
+	display: block;
+}
+
+.role-section {
+	margin-bottom: 10px; /* Space between roles */
+}
+
+.role-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px; /* Font size for role names */
+	font-weight: bold; /* Bold text */
+	cursor: pointer; /* Pointer cursor on hover */
+	padding: 12px; /* Padding inside the header */
+	margin-right: 20px;
+	background-color: #2c3e50; /* Background color of role header */
+	border-radius: 5px; /* Rounded corners */
+	border: 2px solid transparent; /* Border for the role header */
+	transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.role-header:hover {
+	background-color: #1abc9c; /* Change background on hover */
+	border-color: #1abc9c; /* Change border on hover */
+}
+
+.role-header.active {
+	background-color: #1abc9c; /* Active background color */
+	border-color: #1abc9c; /* Active border color */
+}
+
+.role-name {
+	display: inline; /* Show role name */
+}
+
+.role-name.hidden {
+	display: none; /* Hide role name when sidebar is collapsed */
+}
+
+.arrow {
+	transition: transform 0.3s; /* Smooth rotation */
+	font-size: 16px; /* Size of the arrow symbols */
+}
+
+.arrow.open {
+	transform: rotate(180deg); /* Rotate arrow when open */
+}
+
+.role-links {
+	list-style-type: none; /* Remove bullet points */
+	padding-left: 15px; /* Space between role header and links */
+	margin-top: 8px; /* Space above the links */
+}
+
+.role-links li {
+	margin-bottom: 8px; /* Space between each link */
+}
+
+.role-links a {
+	color: #ecf0f1; /* Link color */
+	text-decoration: none; /* Remove underline from links */
+	padding: 8px 10px; /* Padding for clickable area */
+	display: block; /* Make the entire area clickable */
+	border: 2px solid transparent; /* Transparent border initially */
+	border-radius: 4px; /* Rounded corners */
+	transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.role-links a:hover {
+	background-color: #34495e; /* Change background on hover */
+	border-color: #1abc9c; /* Change border color on hover */
+}
